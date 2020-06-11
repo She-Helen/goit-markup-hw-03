@@ -2,10 +2,7 @@
 html {
   box-sizing: border-box;
 }
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+
 }
 img {
   display: block;
@@ -13,13 +10,13 @@ img {
   height: auto;
 }
 
-/* основной цвет текста  #757575; */
+/* основной цвет текста #757575; */
 /* цвет текста заголовков #212121; */
-/* белый #ffffff;  */
-/* цвет для ховера - акцент #2196f3; */
+/* белый #ffffff; */
+/* цвет для ховера - акцент#2196f3; */
 /* вторичный цвет фона #f5f4fa; */
 /* цвет фона футера #2F303A; */
-/* вторичный цвет текста футера rgba(255, 255, 255, 0.6) */
+/* вторичный цвет текста футера rgba(255, 255, 255, 0.6); */
 
 :root {
   --primary-text-color: #757575;
@@ -37,47 +34,89 @@ body {
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
   font-size: 14px;
-  line-height: 1.71;
+
 }
 
-/* сбрасываю маркировку спискам и подчеркивание ссылкам*/
+/* сбрасываю стили спискам, заголовкам и ссылкам*/
 ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
+
 .link {
   text-decoration-line: none;
 }
+
 .link:visited {
   color: inherit;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+/*Задаю всем заголовкам цвет*/
 .title {
   color: var(--title-text-color);
 }
 
-/* Логотип */
-/* line-height - identical to box height - уточнить, нужно ли указывать если есть такой коммент */
+/* Logo */
 .logo {
+  width: 153px;
+  height: 31px;
+  margin-top: 24px;
+  margin-bottom: 25px;
+
   color: var(--accent-color);
 
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.19;
   letter-spacing: 0.03em;
   text-decoration: none;
 }
-
 .logo-header {
   color: #000000;
 }
-
 .logo-footer {
   color: var(--primary-white-color);
 }
 
 /* Header */
+.page-header {
+  height: 80px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  height: 80px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+.site-nav > .logo {
+  margin-right: 85px;
+}
+
+.site-nav .item + .item {
+  margin-left: 50px;
+}
+
 .site-nav .link {
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -89,6 +128,10 @@ ul {
   color: var(--accent-color);
 }
 
+.site-nav .nav:hover, .site-nav .nav:focus {
+  text-decoration: underline;
+}
+
 .site-nav .nav {
   color: var(--title-text-color);
 }
@@ -97,9 +140,18 @@ ul {
   color: var(--accent-color);
 }
 
+.site-nav.contacts {
+  margin-left: auto;
+}
+
+.contacts .contacts-item + .contacts-item{
+margin-left: 30px;
+}
+
 .contacts .link {
   color: var(--primary-text-color);
 }
+
 
 /* Hero - bg-color потом заменим на картинку*/
 .hero {
