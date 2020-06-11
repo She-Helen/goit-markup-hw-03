@@ -38,10 +38,10 @@ body {
 }
 
 /* сбрасываю стили спискам, заголовкам и ссылкам*/
-ul {
-  list-style: none;
+.list {
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 
 .link {
@@ -66,8 +66,6 @@ h1, h2, h3, h4, h5, h6 {
 .logo {
   width: 153px;
   height: 31px;
-  margin-top: 24px;
-  margin-bottom: 25px;
 
   color: var(--accent-color);
 
@@ -77,6 +75,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.03em;
   text-decoration: none;
 }
+
 .logo-header {
   color: #000000;
 }
@@ -106,6 +105,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 .site-nav > .logo {
   margin-right: 85px;
+  margin-top: 24px;
+  margin-bottom: 25px;
 }
 
 .site-nav .item + .item {
@@ -152,13 +153,18 @@ margin-left: 30px;
   color: var(--primary-text-color);
 }
 
-
 /* Hero - bg-color потом заменим на картинку*/
 .hero {
   background-color: var(--footer-bg-color);
 }
 
 .hero-title {
+  width: 696px;
+  height: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+
   color: var(--primary-white-color);
 
   font-weight: 900;
@@ -169,15 +175,30 @@ margin-left: 30px;
   text-transform: uppercase;
 }
 
+.hero .button {
+display: block;
+margin-left: auto;
+margin-right: auto;
+padding-top: 10px;
+padding-bottom: 10px;
+}
+
+
 .hero .button,
 .footer .button {
+  width: 200px;
+  height: 50px;
+
   background-color: var(--accent-color);
   color: var(--primary-white-color);
 
   font-size: 16px;
-  line-height: 1.88;
+  font-weight: 700;
+  line-height: 1.87;
   text-align: center;
   letter-spacing: 0.06em;
+
+  border-radius: 4px
 }
 
 /* Features */
