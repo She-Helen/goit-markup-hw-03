@@ -3,7 +3,6 @@ html {
   box-sizing: border-box;
 }
 
-}
 img {
   display: block;
   max-width: 100%;
@@ -17,6 +16,7 @@ img {
 /* вторичный цвет фона #f5f4fa; */
 /* цвет фона футера #2F303A; */
 /* вторичный цвет текста футера rgba(255, 255, 255, 0.6); */
+/* дополнительный цвет фона элементов rgba(47, 48, 58, 0.8);*/
 
 :root {
   --primary-text-color: #757575;
@@ -25,6 +25,7 @@ img {
   --primary-white-color: #ffffff;
   --secondary-bg-color: #f5f4fa;
   --footer-bg-color: #2f303a;
+  --border-icon-color: #afb1b8;
 }
 
 body {
@@ -34,7 +35,6 @@ body {
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
   font-size: 14px;
-
 }
 
 /* сбрасываю стили спискам, заголовкам и ссылкам*/
@@ -52,7 +52,12 @@ body {
   color: inherit;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0;
 }
@@ -66,6 +71,7 @@ h1, h2, h3, h4, h5, h6 {
 .logo {
   width: 153px;
   height: 31px;
+  outline: 1px solid tomato;
 
   color: var(--accent-color);
 
@@ -79,6 +85,7 @@ h1, h2, h3, h4, h5, h6 {
 .logo-header {
   color: #000000;
 }
+
 .logo-footer {
   color: var(--primary-white-color);
 }
@@ -89,22 +96,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .container {
+  display: flex;
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-}
-
-.page-header .container {
-  display: flex;
-  align-items: center;
   margin-left: auto;
   margin-right: auto;
 }
 
 .site-nav {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 }
+
 .site-nav > .logo {
   margin-right: 85px;
   margin-top: 24px;
@@ -117,8 +121,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .site-nav .link {
   display: block;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 32px;
 
   font-weight: 500;
   font-size: 14px;
@@ -131,15 +134,11 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--accent-color);
 }
 
-.site-nav .nav:hover, .site-nav .nav:focus {
-  text-decoration: underline;
-}
-
 .site-nav .nav {
   color: var(--title-text-color);
 }
 
-.site-nav .current {
+.site-nav .nav.current {
   color: var(--accent-color);
 }
 
@@ -147,8 +146,8 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: auto;
 }
 
-.contacts .contacts-item + .contacts-item{
-margin-left: 30px;
+.contacts .contacts-item + .contacts-item {
+  margin-left: 30px;
 }
 
 .contacts .link {
@@ -157,11 +156,10 @@ margin-left: 30px;
 
 /* Hero - bg-color потом заменим на картинку*/
 .hero {
+  height: 600px;
+  padding-top: 200px;
+  padding-bottom: 200px;
   background-color: var(--footer-bg-color);
-}
-
-.section {
-    margin-bottom: 94px;
 }
 
 .hero-title {
@@ -182,18 +180,18 @@ margin-left: 30px;
 }
 
 .hero .button {
-display: block;
-margin-left: auto;
-margin-right: auto;
-padding-top: 10px;
-padding-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
-
 
 .hero .button,
 .footer .button {
   width: 200px;
   height: 50px;
+  border-radius: 4px;
 
   background-color: var(--accent-color);
   color: var(--primary-white-color);
@@ -203,37 +201,37 @@ padding-bottom: 10px;
   line-height: 1.87;
   text-align: center;
   letter-spacing: 0.06em;
-
-  border-radius: 4px
 }
 
-/* Features - спряем пока полностью заголовок секции */
-.hidden.title {
+/* Секции основного контента*/
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+/* Features - спрячем пока полностью заголовок секции */
+.hidden.section-title {
   display: none;
 }
 
-.features {
-display: flex;
-justify-content: center;
-}
-
-.features .container {
-  display: flex;
-}
-
 .features .item {
-width: 270px;
+  width: 270px;
 }
-.features .item + .item {
+
+.container .item + .item {
   margin-left: 30px;
+}
+
+.features.section {
+  padding-bottom: 0;
 }
 
 /* задаем фон для будущей картинке*/
 .pic-block {
-height: 120px;
-margin-bottom: 30px;
+  height: 120px;
+  margin-bottom: 30px;
 
-background-color: var(--secondary-bg-color);
+  background-color: var(--secondary-bg-color);
 }
 
 .features .title {
@@ -253,7 +251,10 @@ background-color: var(--secondary-bg-color);
 }
 
 /* Benefits */
+
 .section-title {
+  margin-bottom: 50px;
+
   color: var(--title-text-color);
 
   font-size: 36px;
@@ -262,9 +263,15 @@ background-color: var(--secondary-bg-color);
   text-align: center;
 }
 
+/* Позже сделаем эффект накладывания текста с фоном поверх картинки*/
 .benefits-subtitle {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   color: var(--primary-white-color);
-  background-color: var(--accent-color);
+  background-color: rgba(47, 48, 58, 0.8);
 
   font-size: 14px;
   line-height: 1.14;
@@ -277,23 +284,60 @@ background-color: var(--secondary-bg-color);
   background-color: var(--secondary-bg-color);
 }
 
+.photo {
+  margin-bottom: 30px;
+}
+
 .name,
 .profession {
   font-size: 16px;
-  line-height: 1.19;
   text-align: center;
 }
 .name {
+  margin-bottom: 10px;
+
   font-weight: 500;
 }
 
-.socials .link.link:hover,
-.socials .link.link:focus {
+.profession {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.socials .link:hover,
+.socials .link:focus {
   color: var(--accent-color);
 }
 
-/* Clients*/
+.socials {
+  display: flex;
+  justify-content: center;
+}
 
+.socials .socials-item + .socials-item {
+  margin-left: 10px;
+}
+
+.team .socials-item {
+  padding-bottom: 24px;
+}
+
+/* Размечаем место для иконок соц-сетей пока без контента*/
+.icon-block {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border-icon-color);
+  border-radius: 50%;
+}
+
+/* Clients*/
+/* задаем фон для будущей картинке*/
+.logo-block {
+  width: 170px;
+  height: 90px;
+  border: 1px solid var(--border-icon-color);
+  border-radius: 4px;
+}
 .clients .link:hover,
 .clients .link:focus {
   color: var(--accent-color);
