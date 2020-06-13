@@ -33,7 +33,7 @@
             <li class="item"><a href="" class="link nav">Контакты</a></li>
           </ul>
         </nav>
-        <ul class="site-nav contacts">
+        <ul class="site-nav contacts list">
           <li class="contacts-item">
             <a href="mailto:info@devstudio.com" class="link"
               >info@devstudio.com</a
@@ -47,16 +47,16 @@
     </header>
     <main>
       <section class="section">
-        <h1 class="title">Портфолио</h1>
-        <div>
-          <button type="button" class="filter">Все</button>
-          <button type="button" class="filter">Веб-сайты</button>
-          <button type="button" class="filter">Приложения</button>
-          <button type="button" class="filter">Дизайн</button>
-          <button type="button" class="filter">Маркетинг</button>
+        <h1 class="hidden section-title">Портфолио</h1>
+        <div class="container filter">
+          <button type="button" class="filter-item">Все</button>
+          <button type="button" class="filter-item">Веб-сайты</button>
+          <button type="button" class="filter-item">Приложения</button>
+          <button type="button" class="filter-item">Дизайн</button>
+          <button type="button" class="filter-item">Маркетинг</button>
         </div>
 
-        <ul class="works-list container">
+        <ul class="works list container">
           <li>
             <img
               src="./images/projects/tehnokryak.jpg"
@@ -65,7 +65,7 @@
               height="294"
             />
             <h2 class="title">Технокряк</h2>
-            <p class="filter-item">Веб-сайт</p>
+            <p class="category">Веб-сайт</p>
             <p class="desc">
               Технокряк это современная площадка распространения коронавируса.
               Компании используют эту платформу для цифрового шпионажа и атак на
@@ -80,7 +80,7 @@
               height="294"
             />
             <h2 class="title">Постер New Orlean vs Golden Star</h2>
-            <p class="filter-item">Дизайн</p>
+            <p class="category">Дизайн</p>
             <p class="desc">
               Технокряк это современная площадка распространения коронавируса.
               Компании используют эту платформу для цифрового шпионажа и атак на
@@ -95,7 +95,7 @@
               height="294"
             />
             <h2 class="title">Ресторан Seafood</h2>
-            <p class="filter-item">Приложение</p>
+            <p class="category">Приложение</p>
             <p class="desc">
               Технокряк это современная площадка распространения коронавируса.
               Компании используют эту платформу для цифрового шпионажа и атак на
@@ -110,7 +110,7 @@
               height="294"
             />
             <h2 class="title">Проект Prime</h2>
-            <p class="filter-item">Маркетинг</p>
+            <p class="category">Маркетинг</p>
             <p class="desc">
               Технокряк это современная площадка распространения коронавируса.
               Компании используют эту платформу для цифрового шпионажа и атак на
@@ -125,7 +125,7 @@
               height="294"
             />
             <h2 class="title">Проект Boxes</h2>
-            <p class="filter-item">Приложение</p>
+            <p class="category">Приложение</p>
             <p class="desc">
               Технокряк это современная площадка распространения коронавируса.
               Компании используют эту платформу для цифрового шпионажа и атак на
@@ -140,7 +140,7 @@
               height="294"
             />
             <h2 class="title">Inspiration has no Borders</h2>
-            <p class="filter-item">Веб-сайт</p>
+            <p class="category">Веб-сайт</p>
             <p class="desc">
               Технокряк это современная площадка распространения коронавируса.
               Компании используют эту платформу для цифрового шпионажа и атак на
@@ -155,7 +155,7 @@
               height="294"
             />
             <h2 class="title">Издание Limited Edition</h2>
-            <p class="filter-item">Дизайн</p>
+            <p class="category">Дизайн</p>
             <p class="desc">
               Технокряк это современная площадка распространения коронавируса.
               Компании используют эту платформу для цифрового шпионажа и атак на
@@ -170,7 +170,7 @@
               height="294"
             />
             <h2 class="title">Проект LAB</h2>
-            <p class="filter-item">Маркетинг</p>
+            <p class="category">Маркетинг</p>
             <p class="desc">
               Технокряк это современная площадка распространения коронавируса.
               Компании используют эту платформу для цифрового шпионажа и атак на
@@ -185,7 +185,7 @@
               height="294"
             />
             <h2 class="title">Growing Business</h2>
-            <p class="filter-item">Приложение</p>
+            <p class="category">Приложение</p>
             <p class="desc">
               Технокряк это современная площадка распространения коронавируса.
               Компании используют эту платформу для цифрового шпионажа и атак на
@@ -197,47 +197,55 @@
     </main>
     <!-- Футер -->
     <footer class="footer">
-      <div>
-        <a href="./index.html" class="logo"
-          >Web <span class="logo-footer">Studio</span></a
-        >
-        <address class="address">г. Киев, пр-т Леси Украинки, 26</address>
-        <ul class="footer-contacts">
-          <li>
-            <a href="mailto:info@devstudio.com" class="link"
-              >info@devstudio.com</a
-            >
-          </li>
-          <li>
-            <a href="tel:+380961111111" class="link">+38 096 111 11 11</a>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <!-- Призыв -->
-        <b class="slogan">присоединяйтесь</b>
-        <ul class="socials">
-          <li>
-            <a href="" aria-label="ссылка на Instagram" class="link"
-              >Instagram</a
-            >
-          </li>
-          <li>
-            <a href="" aria-label="ссылка на Twitter" class="link">Twitter</a>
-          </li>
-          <li>
-            <a href="" aria-label="ссылка на Facebook" class="link">Facebook</a>
-          </li>
-          <li>
-            <a href="" aria-label="ссылка на LinkedIn" class="link">LinkedIn</a>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <!-- Призыв -->
-        <b class="slogan">Подпишитесь на рассылку</b>
-        <!-- Форма подписки (пока не размечаем) -->
-        <button type="button" class="button">Подписаться</button>
+      <div class="container">
+        <address class="address-block">
+          <a href="./index.html" class="logo"
+            >Web <span class="logo-footer">Studio</span></a
+          >
+          <p class="address">г. Киев, пр-т Леси Украинки, 26</p>
+          <ul class="footer-contacts list">
+            <li class="item">
+              <a href="mailto:info@devstudio.com" class="link"
+                >info@devstudio.com</a
+              >
+            </li>
+            <li class="item">
+              <a href="tel:+380961111111" class="link">+38 096 111 11 11</a>
+            </li>
+          </ul>
+        </address>
+        <div class="slogan-block">
+          <!-- Призыв -->
+          <b class="slogan">присоединяйтесь</b>
+          <ul class="socials list">
+            <li class="socials-item">
+              <a href="" aria-label="ссылка на Instagram" class="link">
+                <div class="icon-block"></div>
+              </a>
+            </li>
+            <li class="socials-item">
+              <a href="" aria-label="ссылка на Twitter" class="link">
+                <div class="icon-block"></div>
+              </a>
+            </li>
+            <li class="socials-item">
+              <a href="" aria-label="ссылка на Facebook" class="link">
+                <div class="icon-block"></div>
+              </a>
+            </li>
+            <li class="socials-item">
+              <a href="" aria-label="ссылка на LinkedIn" class="link">
+                <div class="icon-block"></div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <!-- Призыв -->
+          <b class="slogan">Подпишитесь на рассылку</b>
+          <!-- Форма подписки (пока не размечаем) -->
+          <button type="button" class="button">Подписаться</button>
+        </div>
       </div>
       <p lang="en" class="copyright">2020 | Developed by GoIT Students</p>
     </footer>

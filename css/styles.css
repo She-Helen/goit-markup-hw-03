@@ -8,6 +8,14 @@ img {
   max-width: 100%;
   height: auto;
 }
+p {
+  margin-top: 0px;
+  margin-bottom: 0;
+}
+
+address {
+  font-style: normal;
+}
 
 /* основной цвет текста #757575; */
 /* цвет текста заголовков #212121; */
@@ -69,9 +77,9 @@ h6 {
 
 /* Logo */
 .logo {
+  display: block;
   width: 153px;
   height: 31px;
-  outline: 1px solid tomato;
 
   color: var(--accent-color);
 
@@ -92,7 +100,7 @@ h6 {
 
 /* Header */
 .page-header {
-  height: 80px;
+  border-bottom: 1px solid #ececec;
 }
 
 .container {
@@ -191,6 +199,7 @@ h6 {
 .footer .button {
   width: 200px;
   height: 50px;
+  border: 0;
   border-radius: 4px;
 
   background-color: var(--accent-color);
@@ -209,6 +218,10 @@ h6 {
   padding-bottom: 94px;
 }
 
+.list.container {
+  justify-content: space-between;
+}
+
 /* Features - спрячем пока полностью заголовок секции */
 .hidden.section-title {
   display: none;
@@ -216,10 +229,6 @@ h6 {
 
 .features .item {
   width: 270px;
-}
-
-.container .item + .item {
-  margin-left: 30px;
 }
 
 .features.section {
@@ -230,6 +239,7 @@ h6 {
 .pic-block {
   height: 120px;
   margin-bottom: 30px;
+  border-radius: 4px;
 
   background-color: var(--secondary-bg-color);
 }
@@ -246,8 +256,6 @@ h6 {
 .text {
   font-size: 14px;
   line-height: 1.71;
-  margin-top: 0px;
-  margin-bottom: 0;
 }
 
 /* Benefits */
@@ -283,7 +291,6 @@ h6 {
 .team {
   background-color: var(--secondary-bg-color);
 }
-
 .photo {
   margin-bottom: 30px;
 }
@@ -346,13 +353,30 @@ h6 {
 /* Footer */
 
 .footer {
+  padding-top: 45px;
+
   background-color: var(--footer-bg-color);
+}
+.footer > .container {
+  align-items: baseline;
+
+  margin-bottom: 28px;
+}
+
+.address-block {
+  margin-right: 85px;
+}
+
+.slogan-block {
+  margin-right: 94px;
 }
 
 .address {
+  margin-top: 8px;
+  margin-bottom: 9px;
+
   color: var(--primary-white-color);
 
-  font-style: normal;
   font-weight: 400;
 }
 
@@ -360,7 +384,14 @@ h6 {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.footer-contacts .item {
+  margin-top: 9px;
+}
+
 .slogan {
+  display: block;
+  margin-bottom: 20px;
+
   color: var(--primary-white-color);
 
   line-height: 1.14;
@@ -368,6 +399,13 @@ h6 {
 }
 
 .copyright {
+  width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 18px;
+  padding-bottom: 21px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
   color: rgba(255, 255, 255, 0.4);
 
   font-size: 12px;
@@ -377,6 +415,15 @@ h6 {
 
 /*Portfolio*/
 .filter {
+  margin-bottom: 50px;
+  justify-content: center;
+}
+
+.filter-item {
+  padding: 6px 22px;
+  border: 0;
+  border-radius: 4px;
+
   background-color: var(--secondary-bg-color);
   color: var(--title-text-color);
 
@@ -387,24 +434,35 @@ h6 {
   letter-spacing: 0.03em;
   text-align: center;
 }
-.filter:hover,
-.filter:focus {
+
+.filter-item:hover,
+.filter-item:focus {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
 }
 
-.works-list .title {
+.filter .filter-item + .filter-item {
+  margin-left: 8px;
+}
+
+.works {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.works .title {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
 
-.filter-item {
+.category {
   font-size: 16px;
   line-height: 1.87;
 }
 
 .desc {
+  display: none;
+
   background-color: var(--accent-color);
   color: var(--primary-white-color);
 
