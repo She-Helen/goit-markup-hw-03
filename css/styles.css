@@ -3,11 +3,18 @@ html {
   box-sizing: border-box;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
+
 p {
   margin-top: 0px;
   margin-bottom: 0;
